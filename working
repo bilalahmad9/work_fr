@@ -1,0 +1,251 @@
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
+
+class HomaPage extends StatefulWidget {
+  @override
+  _HomaPageState createState() => _HomaPageState();
+}
+
+class _HomaPageState extends State<HomaPage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          toolbarHeight: 280,
+          flexibleSpace: Column(
+            children: [
+              Container(
+                height: 220,
+                width: 1000,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Colors.deepPurple, Colors.purple],
+                  ),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(top: 100.0, left: 40, right: 40),
+                      height: 35,
+                      width: 250,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Search',
+                          hintStyle: TextStyle(color: Colors.grey),
+                          contentPadding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 13.0),
+                          suffixIcon: Icon(
+                            Icons.search,
+                            size: 20,
+                          ),
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
+                        ),
+                      ),
+                      decoration: new BoxDecoration(
+                        borderRadius: new BorderRadius.all(
+                          new Radius.circular(30.0),
+                        ),
+                        color: Colors.white,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20.0, left: 40, right: 40),
+                      height: 35,
+                      width: 250,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'click here for more',
+                          hintStyle: TextStyle(color: Colors.grey),
+                          contentPadding: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 13.0),
+                          suffixIcon: Icon(
+                            Icons.star_border,
+                            size: 20,
+                          ),
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
+                        ),
+                      ),
+                      decoration: new BoxDecoration(
+                        borderRadius: new BorderRadius.all(
+                          new Radius.circular(30.0),
+                        ),
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          bottom: TabBar(
+            indicatorColor: Colors.purple,
+            unselectedLabelStyle: TextStyle(color: Colors.grey),
+            unselectedLabelColor: Colors.grey,
+            labelColor: Colors.deepPurple,
+            tabs: [
+              Tab(
+                child: Text(
+                  "Lists",
+                  style: TextStyle(fontSize: 20, ),
+                ),
+              ),
+              Tab(
+                child: Text(
+                  "Carte",
+                  style: TextStyle(fontSize: 20, ),
+                ),
+              ),
+            ],
+          ),
+          title: Container(
+            margin: EdgeInsets.only(top: 200, left: 130),
+              child: Text(
+            "18 RESULTAT",
+            style: TextStyle(
+                fontSize: 16, fontWeight: FontWeight.bold, color: Colors.deepPurple),
+          )),
+        ),
+        body: TabBarView(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: 40, left: 10, right: 10),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            height: 80,
+                            width: 80,
+                            child: Image.asset("assets/images/list.jpg", fit: BoxFit.fill,),
+                          ),
+                          SizedBox(width: 30,),
+                          Column(
+                            children: [
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10,),
+                      Row(
+                        children: [
+                          Container(
+                            height: 5,
+                            width: 80,
+                            color: Colors.indigo,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 40, left: 10, right: 10),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            height: 80,
+                            width: 80,
+                            child: Image.asset("assets/images/list.jpg", fit: BoxFit.fill,),
+                          ),
+                          SizedBox(width: 30,),
+                          Column(
+                            children: [
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10,),
+                      Row(
+                        children: [
+                          Container(
+                            height: 5,
+                            width: 80,
+                            color: Colors.indigo,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 40, left: 10, right: 10),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            height: 80,
+                            width: 80,
+                            child: Image.asset("assets/images/list.jpg", fit: BoxFit.fill,),
+                          ),
+                          SizedBox(width: 30,),
+                          Column(
+                            children: [
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                              SizedBox(height: 5,),
+                              Text("This is the Image.This is the Image.", style: TextStyle(fontSize: 15),),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10,),
+                      Row(
+                        children: [
+                          Container(
+                            height: 5,
+                            width: 80,
+                            color: Colors.indigo,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Text(
+              "Lists",
+              style: TextStyle(fontSize: 20),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
